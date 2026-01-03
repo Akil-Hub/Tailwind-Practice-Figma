@@ -9,10 +9,12 @@ import company1 from '../assets/company1.png';
 import company2 from '../assets/company2.png';
 import company3 from '../assets/company3.png';
 import company4 from '../assets/company4.png';
+import PrimaryBtn from '@/components/Buttons/PrimaryBtn';
 const Hero = () => {
   return (
+   <>
     <section
-      className="  md:h-[800px] h-[600px] relative -z-50  w-full bg-center bg-cover  bg-no-repeat "
+      className="  overflow-hidden md:h-[1020px] h-[600px] relative   w-full bg-center bg-cover  bg-no-repeat "
       style={{ backgroundImage: `url(${banner})` }}
     >
       <article className="wrapper relative flex flex-col justify-center items-center py-30">
@@ -22,29 +24,22 @@ const Hero = () => {
           Guaranteed increase of your website sales
         </h1>
 
-        <p className="text py-3 text-center sm:w-129">
+        <p className="text text-gray-300 py-3 text-center sm:w-129 pb-20">
           With over 25 years of experience, we have crafted thousands of strategic discovery process
           that enables us to peel back the layers which enable us to understand.
         </p>
 
-        <div className=" flex  mt-10 sm:mt-0  ">
+        <div className=" flex  mt-10 sm:mt-0 absolute bottom-35 z-10  ">
           <input
             type="text"
             name="text"
             className=" text-sm  px-3 py-3 rounded-tl-xl sm:w-70 rounded-bl-xl bg-white focus:outline-none "
             placeholder="Paste Your Website Links"
           />
-          <button className="px-4 text-sm py-3 bg-violet-500 rounded-tr-xl rounded-br-xl text-white ">
-            Analyze Website
-          </button>
+          <PrimaryBtn text='Analytics Website' className="rounded-tl-none rounded-bl-none px-2 text-xs"/>
         </div>
 
-        <div className="clouds ">
-          <img src={cloud1} alt="" className=" hidden sm:block absolute -z-5  -bottom-80 left-0 " />
-
-          <img src={cloud2} alt="" className="hidden sm:block  absolute -z-1  -bottom-93 left-0" />
-          <img src={cloud3} alt="" className=" hidden sm:block  absolute z-3  -bottom-86 left-0" />
-        </div>
+     
         <div className="runningBrands absolute z-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4  gap-6 -bottom-80 mb-20 sm:mb-0">
           <img src={company1} alt="" />
           <img src={company2} alt="" />
@@ -52,7 +47,19 @@ const Hero = () => {
           <img src={company4} alt="" />
         </div>
       </article>
+          <img src={cloud1} alt="" className="left-1/2 -translate-x-1/2 hidden sm:block absolute z-1  bottom-0  " />
+
+          <img src={cloud2} alt="" className="hidden left-1/2 -translate-x-1/2 sm:block  absolute z-2  bottom-0 " />
+          <img src={cloud3} alt="" className=" left-1/2 -translate-x-1/2 hidden sm:block  absolute z-3  bottom-0 " />
+
     </section>
+
+
+
+   
+   
+   </>
+
   );
 };
 

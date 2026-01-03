@@ -1,3 +1,4 @@
+import PrimaryBtn from '@/components/Buttons/PrimaryBtn';
 import logo from '../assets/logo.png';
 import { IoIosArrowDown } from 'react-icons/io';
 
@@ -5,7 +6,7 @@ const Navbar = () => {
   return (
     <section className="fixed w-full z-50 ">
       <nav className="flex justify-between wrapper backdrop-blur-3xl bg-black/20  items-center">
-        <img src={logo} alt="" className="max-w-none" />
+       <span> <img src={logo} alt="" className="" /></span>
 
         <ul className=" hidden md:flex gap-x-7 text-white">
           <li className="flex gap-1 items-center  active:scale-95 hover:text-blue-200 duration-300">
@@ -26,7 +27,7 @@ const Navbar = () => {
         </ul>
 
         <div className="righButton">
-            <button className="btn bg-blue-50  ">Contact Us</button>
+            <PrimaryBtn text='Contact Us'/> 
         </div>
 
 

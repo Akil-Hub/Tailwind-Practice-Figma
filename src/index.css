@@ -1,59 +1,97 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import "tailwindcss";
 
-@theme{
+@theme {
     --font-primary: "Roboto", sans-serif;
     --color-primary: #FF383C;
     --color-heading: #30344E;
-    --color-secondary: #52C5B6;
-    --color-para: #5B5F77; 
+    --color-secondary: #EFF4F8;
+    --color-para: #5B5F77;
 }
 
-body{
+body {
     font-family: var(--font-primary);
 }
 
-@layer components{
-    
+@layer components {
+
+
     /* Container & Section */
-    .wrapper{
-        @apply max-w-[1360px] mx-auto px-4 sm:px-6 lg:px-8 py-3;
+    .wrapper {
+        @apply max-w-[1350px] mx-auto px-4 sm:px-6 lg:px-8 py-1;
     }
-    
-    .section{
+
+    .section {
         @apply py-12 lg:py-20;
     }
-    
+
     /* Hero (2 columns) */
-    .hero{
-        @apply grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center;
+    .hero {
+        @apply grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 items-center;
     }
-    
+
     /* Cards */
-    .cards{
+    .cards {
         @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6;
     }
 
     /* Auto Grid (for images/gallery) */
-    .auto-grid{
-        @apply grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-6;
-    }
-    
+    /* .auto-grid {
+        @apply grid grid-cols-[repeat(auto-fit, minmax(250px, 1fr))] gap-6;
+    } */
+
     /* Buttons */
-    .btn{
-        @apply px-6 py-3 rounded-lg font-semibold transition-all;
+    .btn {
+        @apply px-6 py-3 rounded-lg font-medium transition-all;
     }
-    
-    .btn-primary{
-        @apply bg-[var(--color-primary)] text-white hover:scale-105;
+
+    .btn-primary {
+        @apply bg-primary text-white hover:scale-105;
     }
-    
+
     /* Typography */
-    .title{
-        @apply text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--color-heading)];
+    .title {
+        @apply text-3xl md:text-4xl lg:text-5xl font-bold text-heading;
     }
-    
-    .text{
-        @apply text-[var(--color-para)] leading-relaxed;
+
+    .subHeading {
+        @apply text-2xl sm:text-3xl lg:text-4xl text-center font-semibold text-heading
+    }
+
+    .text {
+        @apply text-para leading-relaxed;
+    }
+
+
+    .plans-table {
+        @apply w-full border-collapse
+    }
+
+    .plans-table th,
+    .plans-table td {
+        @apply border-x border-gray-200 text-center text-xs sm:text-base p-2 sm:p-4
+    }
+
+    .plans-table th {
+        @apply font-semibold text-lg
+    }
+
+    .color-row {
+        @apply bg-[#F1FBFB]
+    }
+
+    .plans-table tbody tr:hover {
+        @apply bg-gray-100 duration-300 transition-colors
+    }
+
+    /* Remove left border from first column */
+    .plans-table th:first-child,
+    .plans-table td:first-child {
+        @apply border-l-0
+    }
+
+    .plans-table th,
+    .plans-table td {
+        @apply border-x border-gray-200 text-center p-4
     }
 }
