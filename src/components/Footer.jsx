@@ -7,9 +7,9 @@ const Footer = () => {
     <article className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-6  justify-items-center text-center sm:text-left">
 
     {/* First column - spans 2 columns on large screens */}
-    <div className="px-6 lg:col-span-2 sm:pl-32 lg:pl-0">
+    <div className="px-6 lg:col-span-2 sm:pl-30 md:pl-0">
         <img src={FooterLogo} alt="Footer Logo" className="mx-auto sm:mx-0"/>
-        <p className="py-5 text-para w-100 sm:w-none text-center sm:text-left">
+        <p className="py-5 text-para w-100  md:w-full   text-center sm:text-left">
             Install any demo or template with a single click. You can mix and match all the demos & templates. Every demo can be turned into one or multi-page.
         </p>
     </div>

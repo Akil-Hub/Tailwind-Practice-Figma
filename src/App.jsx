@@ -1,26 +1,26 @@
-import Footer from '@/components/Footer';
-import HelpSection from '@/components/HelpSection';
-import Hero from '@/components/Hero';
-import Navbar from '@/components/Navbar';
-import PlansSection from '@/components/PlansSection';
-import StudiesCard from '@/components/StudiesCard';
-import Testimonials from '@/components/Testimonials';
-import ToolsSection from '@/components/ToolsSection';
-import TrafficSection from '@/components/TrafficSection';
-import React from 'react';
 
+import Router from '@/routes/Router'
+import { ModalProvider } from '@/context/ModalContext';
+import ContactModal from '@/Modals/ContactModal';
+import ServicesModal from '@/Modals/ServicesModal';
+import FreeDomainModal from '@/Modals/FreeDomainModal';
+import { RouterProvider } from 'react-router-dom';
 const App = () => {
   return (
     <>
-     <Navbar/>
-     <Hero/>
-     <ToolsSection/>
-     <TrafficSection/>
-     <HelpSection/>
-     <StudiesCard/>
-      <PlansSection/>
-      <Testimonials/>
-      <Footer/>
+    
+    <ModalProvider>
+
+    <RouterProvider router={Router}/>
+
+
+      {/* here is my pupoup modals */}
+      <ContactModal/>
+      <ServicesModal/>
+      <FreeDomainModal/>
+
+
+    </ModalProvider>
    
     </>
   );

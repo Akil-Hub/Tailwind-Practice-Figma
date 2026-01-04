@@ -3,7 +3,7 @@ import Testimonial from '../assets/Testimonial.png';
 import PrimaryBtn from '@/components/Buttons/PrimaryBtn';
 const Testimonials = () => {
   return (
-    <section className="wrapper section">
+    <section className="wrapper section pt-40">
       <article className="relative h-50   w-100 sm:w-full   flex justify-center items-center hover:scale-102 duration-400">
         <span className="absolute  pb-10">
           {' '}
